@@ -196,15 +196,18 @@ const admin = [
 
 
 export const setLocalStorage =()=>{
-    localStorage.setItem('users', JSON.stringify(employees));
+    localStorage.setItem('employees', JSON.stringify(employees));
     localStorage.setItem('admin', JSON.stringify(admin));
-
 
 }
 export const getLocalStorage =()=>{
-    localStorage.getItem('users', JSON.stringify(employees));
-    localStorage.getItem('admin', JSON.stringify(admin));
+    const employees= JSON.parse(localStorage.getItem('employees'));
+    const admin= localStorage.getItem('admin');
+    
 
+    console.log(JSON.parse(employees));
+    console.log(JSON.parse(admin));
+    
 
 }
 
